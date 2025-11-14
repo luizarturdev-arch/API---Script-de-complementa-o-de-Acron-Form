@@ -65,8 +65,3 @@ def preencher_pdf():
     except Exception as e:
         # Captura qualquer erro inesperado durante o processamento
         return jsonify({"erro": f"Erro interno ao processar o PDF: {str(e)}"}), 500
-
-# Permite rodar o servidor
-if __name__ == '__main__':
-    # Em produção, você usaria um servidor WSGI (Gunicorn/uWSGI)
-    app.run(debug=True, port=5000)
